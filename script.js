@@ -40,14 +40,16 @@ function hitung() {
     if (period == data.length) {
       return sma(data, period);
     }
-    for (let element of newData) {
-      if (prevxma == 0) {
+    for (let el of newData) {
+      if (prevxma === 0) {
         prevxma = sma(firstxma, firstxma.length);
       }
-      newxma = (2 / (period + 1)) * (element - prevxma) + prevxma;
+      newxma = (2 / (period + 1)) * (el - prevxma) + prevxma;
       prevxma = newxma;
+      period++;
+      console.log(prevxma);
     }
-    console.log(newData, firstxma);
+    console.log(newData, firstxma, prevxma);
     return newxma;
   };
 
