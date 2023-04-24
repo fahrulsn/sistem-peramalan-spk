@@ -1,0 +1,109 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  background-image: url(bg.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: 0 -4rem;
+}
+header {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container {
+  width: 50%;
+  height: 60%;
+  display: flex;
+  background: rgba(255, 255, 255, 0.4);
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  outline: 3px solid white;
+  outline-offset: 0.5rem;
+  backdrop-filter: blur(5px);
+}
+#input-container {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+/* remove arrow */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+#input-container .input {
+  width: 30.2%;
+  height: 2rem;
+  border-radius: 1rem;
+  padding: 0.4rem;
+  margin: 0 0.2rem;
+  text-align: center;
+  appearance: none;
+}
+#input-container .data {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#input-container .input:focus {
+  outline-color: dodgerblue;
+  outline-style: solid;
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+}
+#input-container .input:focus::placeholder {
+  color: white;
+}
+#input-container #period {
+  width: 45%;
+  flex-grow: 1;
+  height: 2.7rem;
+}
+#input-container #method {
+  width: 45%;
+  flex-grow: 1;
+  height: 2.7rem;
+}
+#hitung {
+  width: 100%;
+  height: 2.7rem;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 1rem;
+  font-weight: bold;
+  flex-grow: 3;
+}
+#output-container {
+  width: 85%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: bold;
+}

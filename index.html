@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>SISTEM PERAMALAN</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>SISTEM PERAMALAN</h1>
+      </header>
+      <div id="input-container">
+        <div class="data">
+          <input
+            type="number"
+            id="data1"
+            class="input"
+            placeholder="Masukkan data 1"
+          />
+          <input
+            type="number"
+            id="data2"
+            class="input"
+            placeholder="Masukkan data 2"
+          />
+          <input
+            type="number"
+            id="data3"
+            class="input"
+            placeholder="Masukkan data 3"
+          />
+        </div>
+        <div class="data">
+          <select name="period" id="period" class="input">
+            <option value="">Pilih periode</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+          <select name="method" id="method" class="input">
+            <option value="" selected>Pilih metode</option>
+            <option value="SMA">Simple Moving Average</option>
+            <option value="WMA">Weighted Moving Average</option>
+            <option value="XMA">Exponential Moving Average</option>
+          </select>
+        </div>
+        <button id="hitung" onclick="hitung()">Hitung Ramalan</button>
+      </div>
+      <div id="output-container">
+        <p id="hasil">Silakan isi data :)</p>
+      </div>
+    </div>
+  </body>
+</html>
