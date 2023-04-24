@@ -1,4 +1,5 @@
 function hitung() {
+  // simpan data input
   const input1 = parseInt(document.getElementById("data1").value);
   const input2 = parseInt(document.getElementById("data2").value);
   const input3 = parseInt(document.getElementById("data3").value);
@@ -11,15 +12,15 @@ function hitung() {
 
   let data = [input1, input2, input3, input4, input5, input6, input7];
   let hasil = 0;
-
-  const sma = (data, period) => {
+  // rumus hitung SMA
+  function sma(data, period) {
     let newData = data.slice(data.length - period, data.length);
     let sum = newData.reduce((a, b) => a + b, 0);
     console.log(newData);
     return sum / newData.length;
-  };
-
-  const wma = (data, period) => {
+  }
+  // rumus hitung WMA
+  function wma(data, period) {
     let newData = data.slice(data.length - period, data.length);
     let sum = 0;
     let totalBobot = 0;
@@ -30,9 +31,9 @@ function hitung() {
     }
     console.log(newData);
     return sum / totalBobot;
-  };
-
-  const xma = (data, period) => {
+  }
+  // rumus hitung XMA
+  function xma(data, period) {
     let firstxma = data.slice(0, period);
     let newData = data.slice(period, data.length);
     let prevxma = 0;
@@ -51,8 +52,8 @@ function hitung() {
     }
     console.log(newData, firstxma, prevxma);
     return newxma;
-  };
-
+  }
+  // jalankan fungsi sesuai metode yg dipilih
   switch (method) {
     case "SMA":
       hasil = sma(data, period);
@@ -64,6 +65,7 @@ function hitung() {
       hasil = xma(data, period);
       break;
   }
+  // kirim hasil output ke html
   document.getElementById("hasil").innerHTML =
     "Hasil dengan metode " + method + " adalah " + hasil.toFixed(2);
 }
